@@ -16,6 +16,7 @@
     {{!-- Theme assets - use the {asset} helper to reference styles & scripts,
     this will take care of caching and cache-busting automatically --}}
     <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/lab-custom.css"}}" />
 
     {{!-- This tag outputs all your advanced SEO meta, structured data, and other important settings,
     it should always be the last tag before the closing head tag --}}
@@ -40,6 +41,7 @@
             </div>
 
             <nav class="gh-head-menu">
+                <button type="button" class="lab-search-btn" data-ghost-search aria-label="搜索文章（快捷键 /）" title="搜索（快捷键 /）">{{> "icons/search"}}<span class="lab-search-txt">搜索</span><kbd>/</kbd></button>
                 {{navigation}}
                 {{#unless @site.members_enabled}}
                     {{#match @custom.navigation_layout "Stacked"}}
@@ -111,6 +113,8 @@
 <script src="{{asset "built/casper.js"}}" defer></script>
 
 {{!-- Ghost outputs required functional scripts with this tag - it should always be the last thing before the closing body tag --}}
+<script src="{{asset "js/lab-custom.js"}}" defer></script>
+
 {{ghost_foot}}
 
 </body>

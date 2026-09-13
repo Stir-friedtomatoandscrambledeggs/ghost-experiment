@@ -41,7 +41,7 @@ which templates loop over to generate a list of posts. --}}
             <header class="post-card-header">
                 <div class="post-card-tags">
                     {{#primary_tag}}
-                        <span class="post-card-primary-tag">{{name}}</span>
+                        <a class="post-card-primary-tag" href="{{url}}">{{name}}</a>
                     {{/primary_tag}}
                     {{#if featured}}
                         <span class="post-card-featured">{{> "icons/fire"}} {{t "Featured"}}</span>
@@ -64,12 +64,12 @@ which templates loop over to generate a list of posts. --}}
         </a>
 
         <footer class="post-card-meta">
-            <time class="post-card-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMM YYYY"}}</time>
+            <time class="post-card-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="YYYY-MM-DD"}}</time>
             {{#if reading_time}}
-                <span class="post-card-meta-length">{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</span>
+                <span class="post-card-meta-length">{{reading_time minute="约 1 分钟读完" minutes="约 % 分钟读完"}}</span>
             {{/if}}
             {{#if @site.comments_enabled}}
-                {{comment_count}}
+                <span class="post-card-meta-comments">{{comment_count}} 条评论</span>
             {{/if}}
         </footer>
 

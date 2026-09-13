@@ -3,6 +3,8 @@
 
 <main id="site-main" class="site-main outer">
 <div class="inner posts">
+    {{> "lab-tagfilter"}}
+
     <div class="post-feed">
 
         {{#tag}}
@@ -48,6 +50,10 @@
         {{/foreach}}
 
     </div>
+
+    {{#unless posts}}
+        <div class="lab-empty">暂无文章，试试上方标签筛选，或按 <kbd>/</kbd> 进行搜索。</div>
+    {{/unless}}
 
     {{pagination}}
     
