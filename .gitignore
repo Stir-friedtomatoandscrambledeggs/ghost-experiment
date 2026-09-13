@@ -25,9 +25,7 @@ runtime/config.production.json
 # ============ Node ============
 node_modules/
 theme/**/node_modules/
-# 主题构建产物（保留源码与可安装 zip）
-theme/**/assets/built/
-theme/**/dist/
+# 说明：主题 assets/built 为可直接安装所需的预编译产物，予以保留入库
 
 # ============ 密钥/环境变量 ============
 .env
