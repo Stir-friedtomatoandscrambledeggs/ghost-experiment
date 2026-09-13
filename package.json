@@ -1,0 +1,11 @@
+{
+  "name": "oss-blog-lab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Ghost 二次开发实验：零第三方依赖的验收测试（Node 内置 test/fetch）",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs"
+  },
+  "engines": { "node": ">=22.23.0" }
+}
