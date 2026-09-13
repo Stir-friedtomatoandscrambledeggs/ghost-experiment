@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 课程实验说明
+    url: https://github.com/Stir-friedtomatoandscrambledeggs/ghost-experiment/blob/main/README.md
+    about: 提交 Issue 前请先阅读 README 与 docs/runbook.md，常见环境问题已在其中说明。
