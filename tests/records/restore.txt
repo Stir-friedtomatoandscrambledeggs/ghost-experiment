@@ -1,0 +1,94 @@
+== [1] stop, cold backup, start ==
+
+Love open source? We’re hiring JavaScript Engineers to work on Ghost full-time.
+https://careers.ghost.org
+
+- Inspecting operating system
+- Checking for deprecations
+Running in development mode
+- Checking for deprecations
+
+- Stopping Ghost: ghost-local
+[32m✔[39m Stopping Ghost: ghost-local
+
+Love open source? We’re hiring JavaScript Engineers to work on Ghost full-time.
+https://careers.ghost.org
+
+- Inspecting operating system
+- Checking for deprecations
+Running in development mode
+- Checking for deprecations
+
+[STARTED] Checking system Node.js version
+[COMPLETED] Checking system Node.js version - found v22.23.2
+[STARTED] Ensuring user is not logged in as ghost user
+[SKIPPED] Ensuring user is not logged in as ghost user
+[STARTED] Checking if logged in user is directory owner
+[SKIPPED] Checking if logged in user is directory owner
+[STARTED] Checking current folder permissions
+[COMPLETED] Checking current folder permissions
+[STARTED] Validating config
+[COMPLETED] Validating config
+[STARTED] Checking memory availability
+[COMPLETED] Checking memory availability
+[STARTED] Checking binary dependencies
+[COMPLETED] Checking binary dependencies
+- Starting Ghost: ghost-local
+[32m✔[39m Starting Ghost: ghost-local
+
+------------------------------------------------------------------------------
+
+Your admin interface is located at: 
+
+    http://localhost:2368/ghost/
+
+== [2] baseline: {"posts":10,"comments":3} ==
+== [3] marker post created: hui-fu-yan-lian-ke-shan-chu-lin-shi-wen-zhang-restore-marker ==
+    after marker: {"posts":11,"comments":3} (posts should be 11)
+== [4] stop, restore backup, start ==
+
+Love open source? We’re hiring JavaScript Engineers to work on Ghost full-time.
+https://careers.ghost.org
+
+- Inspecting operating system
+- Checking for deprecations
+Running in development mode
+- Checking for deprecations
+
+- Stopping Ghost: ghost-local
+[32m✔[39m Stopping Ghost: ghost-local
+
+Love open source? We’re hiring JavaScript Engineers to work on Ghost full-time.
+https://careers.ghost.org
+
+- Inspecting operating system
+- Checking for deprecations
+Running in development mode
+- Checking for deprecations
+
+[STARTED] Checking system Node.js version
+[COMPLETED] Checking system Node.js version - found v22.23.2
+[STARTED] Ensuring user is not logged in as ghost user
+[SKIPPED] Ensuring user is not logged in as ghost user
+[STARTED] Checking if logged in user is directory owner
+[SKIPPED] Checking if logged in user is directory owner
+[STARTED] Checking current folder permissions
+[COMPLETED] Checking current folder permissions
+[STARTED] Validating config
+[COMPLETED] Validating config
+[STARTED] Checking memory availability
+[COMPLETED] Checking memory availability
+[STARTED] Checking binary dependencies
+[COMPLETED] Checking binary dependencies
+- Starting Ghost: ghost-local
+[32m✔[39m Starting Ghost: ghost-local
+
+------------------------------------------------------------------------------
+
+Your admin interface is located at: 
+
+    http://localhost:2368/ghost/
+
+== [5] verify restore ==
+{"marker_gone":true,"posts_now":10,"posts_baseline":10,"posts_restored":true,"comments_now":3,"comments_baseline":3,"comments_restored":true}
+RESTORE_DEMO_DONE
