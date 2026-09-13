@@ -1,0 +1,59 @@
+Ghost 二次开发实验 — 版权与许可证归因 (NOTICE)
+==================================================
+
+本项目是软件工程课程实验产物，基于以下开源项目进行二次开发。
+本项目不重新分发 Ghost 与 Casper 的完整源码；runtime/ 目录中的 Ghost 程序
+通过官方 ghost-cli 在本机安装，theme/oss-blog-theme 由官方主题 Casper 派生修改。
+
+1. Ghost
+   - 项目主页: https://ghost.org
+   - 源代码:   https://github.com/TryGhost/Ghost
+   - 版本:     6.63.0（本机通过 ghost-cli 1.32.5 安装）
+   - 许可证:   MIT License
+   - 版权:     Ghost Foundation
+   - 本实验未修改 Ghost 核心代码，仅通过其公开的 Admin API / Content API、
+     主题机制与配置进行扩展。
+
+2. Casper（Ghost 默认主题，本项目主题 oss-blog-theme 的派生来源）
+   - 源代码: https://github.com/TryGhost/Casper
+   - 许可证: MIT License
+   - 版权:   Ghost Foundation
+   - 派生与修改:
+     * 主题名称改为 oss-blog-theme；
+     * 新增 assets/css/lab-custom.css、assets/js/lab-custom.js、
+       partials/lab-tagfilter.hbs；
+     * 中文化站点文案、日期格式、阅读时长与评论数；
+     * 首页/标签/作者页标签筛选条与空状态；
+     * 文章页标签云、返回首页、按主标签的“相关推荐”模块；
+     * 顶部中文搜索按钮及快捷键。
+     Casper 原有版权与许可证声明在 theme/oss-blog-theme/LICENSE 中予以保留。
+
+3. MailDev（仅本地开发期用于接收会员登录邮件，不作为产物分发）
+   - 源代码: https://github.com/maildev/maildev
+   - 许可证: MIT License
+
+4. 本项目自带内容
+   - scripts/、tests/、docs/ 及上述自定义主题修改，由课程作者
+     conghua Cai (19234215562@163.com) 编写，按 MIT License 提供，仅供教学使用。
+   - 示例文章内容为课程演示用途虚构；示例邮箱 member1@example.com、
+     member2@example.com 为保留示例域名，不对应真实账户。
+
+MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
