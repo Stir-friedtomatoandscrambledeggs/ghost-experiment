@@ -1,0 +1,94 @@
+TAP version 13
+# Subtest: 1.1 前台首页可访问（HTTP 200）
+ok 1 - 1.1 前台首页可访问（HTTP 200）
+  ---
+  duration_ms: 604.3658
+  type: 'test'
+  ...
+# Subtest: 1.2 后台 /ghost 可访问（HTTP 200）
+ok 2 - 1.2 后台 /ghost 可访问（HTTP 200）
+  ---
+  duration_ms: 4.9083
+  type: 'test'
+  ...
+# Subtest: 2.1 已发布文章不少于 8 篇且字段完整
+ok 3 - 2.1 已发布文章不少于 8 篇且字段完整
+  ---
+  duration_ms: 17.7655
+  type: 'test'
+  ...
+# Subtest: 2.2 边界：存在超长标题文章（>=24 字）
+ok 4 - 2.2 边界：存在超长标题文章（>=24 字）
+  ---
+  duration_ms: 12.1549
+  type: 'test'
+  ...
+# Subtest: 2.3 边界：存在无封面（feature_image=null）文章
+ok 5 - 2.3 边界：存在无封面（feature_image=null）文章
+  ---
+  duration_ms: 11.2227
+  type: 'test'
+  ...
+# Subtest: 2.4 代码块文章保留 <pre><code class="language-javascript">
+ok 6 - 2.4 代码块文章保留 <pre><code class="language-javascript">
+  ---
+  duration_ms: 12.5292
+  type: 'test'
+  ...
+# Subtest: 3.1 三个演示标签均存在
+ok 7 - 3.1 三个演示标签均存在
+  ---
+  duration_ms: 9.0226
+  type: 'test'
+  ...
+# Subtest: 3.2 /tag/frontend 标签页可打开且含对应文章
+ok 8 - 3.2 /tag/frontend 标签页可打开且含对应文章
+  ---
+  duration_ms: 542.2359
+  type: 'test'
+  ...
+# Subtest: 4.1 中文检索命中容器化文章，无意义词 0 命中（SQLite 下前台为客户端过滤）
+ok 9 - 4.1 中文检索命中容器化文章，无意义词 0 命中（SQLite 下前台为客户端过滤）
+  ---
+  duration_ms: 11.2481
+  type: 'test'
+  ...
+# Subtest: 4.2 搜索入口存在且可键盘操作
+ok 10 - 4.2 搜索入口存在且可键盘操作
+  ---
+  duration_ms: 544.131999
+  type: 'test'
+  ...
+# Subtest: 5.1 相关推荐：同主标签、最多3篇、排除当前文章
+ok 11 - 5.1 相关推荐：同主标签、最多3篇、排除当前文章
+  ---
+  duration_ms: 29.3601
+  type: 'test'
+  ...
+# Subtest: 6.1 详情页含返回首页/标签云/相关推荐/中文日期
+ok 12 - 6.1 详情页含返回首页/标签云/相关推荐/中文日期
+  ---
+  duration_ms: 553.2669
+  type: 'test'
+  ...
+# Subtest: 7.1 （管理端）会员不少于 2 个
+ok 13 - 7.1 （管理端）会员不少于 2 个
+  ---
+  duration_ms: 29.528
+  type: 'test'
+  ...
+# Subtest: 7.2 （管理端）已发布评论不少于 2 条
+ok 14 - 7.2 （管理端）已发布评论不少于 2 条
+  ---
+  duration_ms: 25.5664
+  type: 'test'
+  ...
+1..14
+# tests 14
+# suites 0
+# pass 14
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2452.796899
