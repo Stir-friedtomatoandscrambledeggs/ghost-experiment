@@ -1,0 +1,108 @@
+/* ============================================================
+   oss-blog-theme 二次开发自定义样式（不改动 Casper 原始文件，
+   仅叠加本文件，便于与上游对照与回滚）
+   ============================================================ */
+
+/* 1. 导航：可键盘操作的中文“搜索”入口 */
+.lab-search-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border: 1px solid rgba(124, 139, 156, 0.4);
+    border-radius: 999px;
+    background: transparent;
+    color: inherit;
+    font-size: 1.4rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: border-color .2s ease, background .2s ease, color .2s ease;
+}
+.lab-search-btn:hover,
+.lab-search-btn:focus-visible {
+    border-color: var(--ghost-accent-color, #000);
+    outline: 2px solid var(--ghost-accent-color, #000);
+    outline-offset: 2px;
+}
+.lab-search-btn svg { width: 16px; height: 16px; }
+.lab-search-btn kbd {
+    font-family: inherit;
+    font-size: 1.1rem;
+    border: 1px solid rgba(124, 139, 156, 0.5);
+    border-bottom-width: 2px;
+    border-radius: 4px;
+    padding: 1px 5px;
+    opacity: .8;
+}
+
+/* 2. 列表页：标签筛选条 */
+.lab-tagfilter {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 28px;
+    padding: 0 0 20px;
+    border-bottom: 1px solid rgba(124, 139, 156, 0.18);
+}
+.lab-tagfilter-label { font-size: 1.3rem; color: rgba(66, 77, 88, .75); }
+.lab-chip {
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(124, 139, 156, 0.35);
+    font-size: 1.35rem;
+    line-height: 1.4;
+    color: inherit;
+    text-decoration: none;
+    transition: all .2s ease;
+}
+.lab-chip:hover,
+.lab-chip:focus-visible {
+    background: var(--ghost-accent-color, #000);
+    border-color: var(--ghost-accent-color, #000);
+    color: #fff;
+    outline: none;
+}
+
+/* 3. 卡片：标签可点击 + 中文评论数 */
+.post-card-primary-tag { text-decoration: none; }
+a.post-card-primary-tag:hover { text-decoration: underline; }
+.post-card-meta-comments { white-space: nowrap; }
+
+/* 4. 详情页：返回首页 + 标签云 */
+.lab-back {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: rgba(66, 77, 88, .8);
+}
+.lab-back:hover { color: var(--ghost-accent-color, #000); text-decoration: underline; }
+.lab-post-tags {
+    margin: 14px 0 4px;
+    font-size: 1.4rem;
+    color: rgba(66, 77, 88, .8);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+.lab-post-tags a {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 999px;
+    background: rgba(124, 139, 156, 0.12);
+    color: inherit;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+.lab-post-tags a:hover { background: var(--ghost-accent-color, #000); color: #fff; }
+
+/* 5. 列表空状态 */
+.lab-empty {
+    padding: 48px 16px;
+    text-align: center;
+    color: rgba(66, 77, 88, .8);
+    font-size: 1.6rem;
+}
