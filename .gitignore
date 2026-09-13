@@ -1,0 +1,46 @@
+# ============ Ghost 运行时（生成/运行数据，禁止入库） ============
+runtime/versions/
+runtime/current
+runtime/node_modules/
+runtime/.pnpm-store/
+runtime/system/
+runtime/.ghost-cli
+runtime/content/data/
+runtime/content/logs/
+runtime/content/images/
+runtime/content/media/
+runtime/content/files/
+runtime/content/adapters/
+runtime/content/settings/
+# 含本机地址/密钥的实例配置（用 env.example / README 说明）
+runtime/config.development.json
+runtime/config.production.json
+
+# ============ 数据库与日志 ============
+*.sqlite3
+*.sqlite3-*
+*.log
+*.pid
+
+# ============ Node ============
+node_modules/
+theme/**/node_modules/
+# 主题构建产物（保留源码与可安装 zip）
+theme/**/assets/built/
+theme/**/dist/
+
+# ============ 密钥/环境变量 ============
+.env
+.env.local
+*.pem
+*.key
+
+# ============ 系统/编辑器 ============
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ============ 演示导出（脱敏文件统一放 exports/，按需单独提交） ============
+exports/*.json
+!exports/.gitkeep
