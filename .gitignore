@@ -1,31 +1,18 @@
-# ============ Ghost 运行时（生成/运行数据，禁止入库） ============
-runtime/versions/
-runtime/current
-runtime/node_modules/
-runtime/.pnpm-store/
-runtime/system/
-runtime/.ghost-cli
-runtime/content/data/
-runtime/content/logs/
-runtime/content/images/
-runtime/content/media/
-runtime/content/files/
-runtime/content/adapters/
-runtime/content/settings/
-# 含本机地址/密钥的实例配置（用 env.example / README 说明）
-runtime/config.development.json
-runtime/config.production.json
+# ============ Ghost 运行时（本机安装/生成产物，整体不入库） ============
+# 主题源码在 theme/，内容种子在 scripts/seed；runtime 由 ghost install local 重建
+runtime/
 
-# ============ 数据库与日志 ============
+# ============ 数据库与日志（双保险） ============
 *.sqlite3
 *.sqlite3-*
 *.log
 *.pid
+.ghostpid
 
 # ============ Node ============
 node_modules/
 theme/**/node_modules/
-# 说明：主题 assets/built 为可直接安装所需的预编译产物，予以保留入库
+# 主题 assets/built 为可直接安装所需的预编译产物，予以保留入库
 
 # ============ 密钥/环境变量 ============
 .env
