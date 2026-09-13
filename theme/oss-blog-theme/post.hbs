@@ -128,8 +128,21 @@ into the {body} tag of the default.hbs template --}}
 
     This query gets the latest 3 posts on the site, but adds a filter to
     exclude the post we're currently on from being included. --}}
+    {{#if primary_tag}}
+    {{#get "posts" filter="primary_tag:{{primary_tag.slug}}+id:-{{id}}" limit="3" include="tags,authors" as |more_posts|}}
+        {{#if more_posts}}
+            <aside class="read-more-wrap outer">
+                <div class="inner"><h3 class="lab-related-title">相关推荐 · {{primary_tag.name}}</h3></div>
+                <div class="read-more inner">
+                    {{#foreach more_posts}}
+                        {{> "post-card"}}
+                    {{/foreach}}
+                </div>
+            </aside>
+        {{/if}}
+    {{/get}}
+{{else}}
     {{#get "posts" filter="id:-{{id}}" limit="3" as |more_posts|}}
-
         {{#if more_posts}}
             <aside class="read-more-wrap outer">
                 <div class="read-more inner">
@@ -139,8 +152,8 @@ into the {body} tag of the default.hbs template --}}
                 </div>
             </aside>
         {{/if}}
-
     {{/get}}
+{{/if}}
 {{/if}}
 
 {{/post}}
